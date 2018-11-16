@@ -53,6 +53,13 @@ module Resque
         @dynamic ||= !!ENV['DYNAMIC_SCHEDULE']
       end
 
+      # If set, will remove destructive web options
+      attr_writer :safe_mode
+
+      def safe_mode
+        @safe_mode ||= !!ENV['SAFE_MODE']
+      end
+
       # If set, will append the app name to procline
       attr_writer :app_name
 

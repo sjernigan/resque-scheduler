@@ -144,6 +144,8 @@ scheduled job must run (coerced with `Kernel#Float()`) (default `5`)
 * `LOGFORMAT` - Log output format to use (either `'text'` or `'json'`,
 default `'text'`)
 * `PIDFILE` - If non-empty, write process PID to file (default empty)
+* `SAFE_MODE` - Remove dangerous destructive web options (suggested for 
+production use, default `false`)
 * `QUIET` - Silence most output if non-empty (equivalent to a level of
 `MonoLogger::FATAL`, default `false`)
 * `VERBOSE` - Maximize log verbosity if non-empty (equivalent to a level

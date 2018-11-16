@@ -53,10 +53,10 @@
   <% end %>
 </table>
 
-<% if size > 0 %>
+<% if size > 0 && !Resque::Scheduler.safe_mode%>
   <br>
   <form method="POST" action="<%=u 'delayed/clear'%>" class='clear-delayed'>
-    <input type='submit' name='' value='Clear Delayed Jobs' />
+    <input type='submit' name='' value='Clear Delayed Jobs' onclick='return confirm("Are you absolutely sure? This cannot be undone.");'/>
   </form>
 <% end %>
 
